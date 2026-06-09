@@ -1,0 +1,16 @@
+{
+  "signatures": [
+    {
+      "name": "Emotet Sample",
+      "sha256": "dc3458c7885dc0a3ce0a4940348d0c4b3f1cdde2820e5b913b20d22e56dc602f"
+    },
+    {
+      "name": "TrickBot Sample",
+      "sha256": "fa82ac34c731be6eebf6e0688ae720913278cd324d03d0a02db327f9c59f439f"
+    },
+    {
+      "name": "AgentTesla Sample",
+      "sha256": "a14c9e2c13bb837fab605e9a86681146b1e3532d9d46468fa56a829ba125021a"
+    }
+  ]
+}
