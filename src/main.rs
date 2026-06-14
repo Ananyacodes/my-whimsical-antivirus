@@ -1,9 +1,7 @@
-#[path = "../logs/logger.rs"]
-mod logger;
+﻿mod logger;
 mod scanner;
 mod signatures;
 mod yara_scan;
-#[path = "../quarantine/quarantine.rs"]
 mod quarantine;
 
 use chrono::Utc;
