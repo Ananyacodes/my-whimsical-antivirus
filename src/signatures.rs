@@ -1,4 +1,5 @@
 use serde::Deserialize;
+use std::error::Error;
 use std::fs;
 
 #[derive(Deserialize)]
@@ -12,12 +13,10 @@ pub struct SignatureDB {
     pub signatures: Vec<Signature>,
 }
 
-pub fn load_signatures() -> SignatureDB {
-    let data = fs::read_to_string("signatures.json")
-        .expect("Failed to read signatures.json");
+pub fn load_signatures() -> Result<SignatureDB, Box<dyn Error>> {
+    let data = fs::read_to_string("signatures.json")?;
 
-    serde_json::from_str(&data)
-        .expect("Invalid JSON format")
+    Ok(serde_json::from_str(&data)?)
 }
 
 pub fn check_hash(hash: &str, db: &SignatureDB) -> Option<String> {

@@ -1,13 +1,13 @@
 use sha2::{Sha256, Digest};
 use std::fs::{self, File};
 use std::io::Read;
-use std::path::Path;
+use std::path::{Path, PathBuf};
 use walkdir::WalkDir;
 use serde::Serialize;
 
 #[derive(Serialize)]
 pub struct FileInfo {
-    pub path: String,
+    pub path: PathBuf,
     pub size: u64,
     pub sha256: String,
     pub magic_bytes: String,
@@ -19,7 +19,6 @@ pub fn get_file_info(path: &Path) -> Option<FileInfo> {
 
     let mut file = File::open(path).ok()?;
 
-    // Read first 8 bytes (magic bytes)
     let mut magic_buf = [0u8; 8];
     let _ = file.read(&mut magic_buf);
 
@@ -42,7 +41,7 @@ pub fn get_file_info(path: &Path) -> Option<FileInfo> {
     let sha256 = format!("{:x}", hasher.finalize());
 
     Some(FileInfo {
-        path: path.display().to_string(),
+        path: path.to_path_buf(),
         size,
         sha256,
         magic_bytes,
