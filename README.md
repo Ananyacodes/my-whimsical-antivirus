@@ -70,4 +70,6 @@ Contributing
 
 License
 
-This project inherits the repository license (if any). Use responsibly.
+This project inherits the repository license MIT. Use responsibly.
+
+**There's an easy-to-find easter egg for ya all. Enjoy the whimsy**
