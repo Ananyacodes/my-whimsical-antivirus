@@ -1,16 +1,16 @@
 {
   "signatures": [
     {
-      "name": "Emotet Sample",
-      "sha256": "dc3458c7885dc0a3ce0a4940348d0c4b3f1cdde2820e5b913b20d22e56dc602f"
+      "name": "Signature: Emotet Banking Trojan",
+      "sha256": "fe3aa1ce781287fb7a153e6bf371206152ecd09fd4db83a58738aac2a6bdd9d4"
     },
     {
-      "name": "TrickBot Sample",
-      "sha256": "fa82ac34c731be6eebf6e0688ae720913278cd324d03d0a02db327f9c59f439f"
+      "name": "Signature: TrickBot RAT",
+      "sha256": "6468a73d20b550fe5c51b41bae6491c41b98da2973edf393d4f3f62d22f624e6"
     },
     {
-      "name": "AgentTesla Sample",
-      "sha256": "a14c9e2c13bb837fab605e9a86681146b1e3532d9d46468fa56a829ba125021a"
+      "name": "Signature: AgentTesla InfoStealer",
+      "sha256": "d0eff1a60c882284722af8c42eb630b5456b29a650e0290360746eed6abacbf6"
     }
   ]
 }
